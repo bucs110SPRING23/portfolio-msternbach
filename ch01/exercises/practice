@@ -1,0 +1,24 @@
+import turtle
+
+pen = turtle.Turtle()
+pen2 = turtle.Turtle()
+window=turtle.Screen()
+
+pen.speed(1)
+pen2.forward(150)
+
+pen.forward(100)
+pen.left(50)
+pen.forward(100)
+pen.right(90)
+pen.forward(100)
+
+pen2.forward(10)
+pen2.left(90)
+pen2.forward(200)
+pen2.right(90)
+pen2.forward(100)
+
+
+window.exitonclick()
+
