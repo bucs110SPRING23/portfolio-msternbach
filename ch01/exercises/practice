@@ -2,6 +2,7 @@ import turtle
 
 pen = turtle.Turtle()
 pen2 = turtle.Turtle()
+
 window=turtle.Screen()
 
 pen.speed(1)
