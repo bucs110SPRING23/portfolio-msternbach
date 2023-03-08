@@ -1,26 +1,39 @@
-import turtle #1. import modules
+import pygame 
 import random
+import math
 
 #Part A
-window = turtle.Screen() # 2.  Create a screen
-window.bgcolor('lightblue')
+pygame.init()
+window = pygame.display.set_mode()
 
-michelangelo = turtle.Turtle() # 3.  Create two turtles
-leonardo = turtle.Turtle()
-michelangelo.color('orange')
-leonardo.color('blue')
-michelangelo.shape('turtle')
-leonardo.shape('turtle')
+screen_size = pygame.display.get_window_size()
+print(screen_size)
+print(screen_size[0])
+print(screen_size[1])
 
-michelangelo.up() # 4. Pick up the pen so we don’t get lines
-leonardo.up()
-michelangelo.goto(-100,20)
-leonardo.goto(-100,-20)
+window.fill("pink")
 
-## 5. Your PART A code goes here
+#pygame.draw.ellipse(window,"blue",[0,0,(screen_size[0]),(screen_size[1])],0)
+pygame.draw.circle(window,"blue", [screen_size[0]//2,screen_size[1]//2], screen_size[1]//2)
+pygame.draw.line(window,"black",(screen_size[0]//2,0),(screen_size[0]//2,screen_size[1]),2)
+pygame.draw.line(window,"black",(0,screen_size[1]//2),(screen_size[0],screen_size[1]//2),2)
 
+pygame.display.flip()
+pygame.time.wait(2000)
 
-# PART B - complete part B here
+#Part B
+x1 = (screen_size[0]//2)
+y1 = (screen_size[1]//2)
 
+for i in range(10):
+    x2 = random.randrange(0,screen_size[0]+1)
+    y2 = random.randrange(0,screen_size[1]+1)
+    distance_from_center = math.hypot(x1-x2, y1-y2) #the distance formula
+    is_in_circle = distance_from_center <= screen_size[1]//2 #screen width
+    if is_in_circle == True:
+        pygame.draw.circle(window,"white",[x2,y2],10)
+    else:
+        pygame.draw.circle(window,"yellow",[x2,y2],10)
 
-window.exitonclick()
+pygame.display.flip()
+pygame.time.wait(2000)
