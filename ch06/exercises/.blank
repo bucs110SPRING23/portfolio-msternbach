@@ -1,0 +1,12 @@
+
+def main():
+    file_pointer = open("assets/ideas.txt","r") 
+    idea = input("Enter a idea: ")
+    ideas = []
+    ideas.append(idea)
+
+    for i in ideas:
+        file_pointer.write(i)
+    print(ideas)
+
+main()

@@ -1,0 +1,49 @@
+
+def percentage_to_letters(percent=99):
+    let = "A"
+    if 80 <= percent < 90:
+        let = "B"
+    elif 70 <= percent < 80:
+        let = "C"
+    elif 60 <= percent < 70:
+        let = "D"
+    elif percent < 60:
+        let = "F"
+    return let
+
+def is_passing(letter):
+    """
+    Returns letter grade based on percentage
+    agrs: none
+    return: letter (str)
+    """
+    return letter.lower() in "abc"
+
+def main():
+    grades = [90, 80, 70, 60, 50]
+    for grade in grades:
+        letter = percentage_to_letters(grade)
+        if is_passing(letter):
+            print("you passed")
+        else:
+            print("someone messed up")
+
+main()
+
+def remove_vowels(string):
+    vowels = "aeiou"
+    vowels += vowels.upper()
+    result = ""
+    for ch in string:
+        if ch not in vowels:
+            result += ch
+    return result
+
+def main2():
+    mystring = "Hello World"
+    mystring = remove_vowels(mystring)
+    print(mystring)
+
+main2()
+
+
