@@ -36,15 +36,13 @@ def graph_coordinates(threenplus1_iters_dict):
    window.blit(msg, (100,100))
    pygame.display.flip()
    pygame.time.wait(2000)
-   print(max_num,max_so_far)
 
 def main():
     pygame.init()
-    upper_limit = 35 #int(input("What is the upper limit: "))
-    ans = threenp1range(upper_limit)
-    graph_coordinates(ans)
+    upper_limit = 35 
+    output = threenp1range(upper_limit)
+    graph_coordinates(output)
     pygame.display.flip()
     pygame.time.wait(2000)
-    print(ans)
 
 main()
