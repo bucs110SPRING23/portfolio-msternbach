@@ -1,0 +1,28 @@
+
+import turtle
+
+class Num:
+
+    def __init__(self,n) -> None:
+        self.data = n
+        self.x = "string"
+
+def main():
+    mynum = Num(7)
+    mynum2 = Num(9)
+    mynum3 = {'data';7, "x": "string"}
+
+    print(mynum.data)
+    print(mynum2.data)
+
+    t = turtle.Turtle()
+    t.forward(56)
+
+    mylist = []
+    mylist.forward()
+    mylist.append()
+    index = 0
+    mylist.pop(index)
+
+
+main()
